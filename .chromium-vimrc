@@ -1,0 +1,37 @@
+set cncpcompletion
+
+site '*://mail.google.com/*' {
+  unmap j
+  unmap k
+}
+
+site '*://www.lingq.com/*' {
+  unmap l
+}
+
+site '*://tinycards.duolingo.com/*' {
+  unmap r
+}
+
+-> {{
+  const extraFilters = {
+    '*://tinycards.duolingo.com/*': {
+      accept: [
+        'a',
+        '._1vqs9'
+      ],
+    },
+    '*://todoist.com/*': {
+      accept: [
+        '.ist_checkbox',
+        '.item_table',
+        '.filter',
+        '.date'
+      ],
+    }
+  };
+
+  Object.getOwnPropertyNames(extraFilters).forEach(pattern => {
+    Hints.siteFilters[pattern] = extraFilters[pattern];
+  });
+}}
