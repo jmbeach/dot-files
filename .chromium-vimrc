@@ -18,7 +18,8 @@ site '*://tinycards.duolingo.com/*' {
     '*://tinycards.duolingo.com/*': {
       accept: [
         'a',
-        '._1vqs9'
+        '._1vqs9',
+        '._3amds'
       ],
     },
     '*://todoist.com/*': {
