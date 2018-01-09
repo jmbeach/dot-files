@@ -1,0 +1,25 @@
+[user]
+	email = jaredbeachdesign@gmail.com
+	name = jmbeach
+[core]
+	editor = 'C:/Program Files (x86)/Vim/vim80/vim.exe'
+	autocrlf = false
+[dif]
+	tool = vimdiff
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	ls = ls-tree
+	cat = cat-file
+	lsf = ls-files
+	ignore = update-index --assume-unchanged
+	renore = update-index --no-assume-unchanged
+	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+	bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive[user]
