@@ -15,6 +15,11 @@ site '*://tinycards.duolingo.com/*' {
 
 -> {{
   const extraFilters = {
+    '*://www.duolingo.com/*': {
+      accept: [
+        '._10knO',
+      ],
+    },
     '*://tinycards.duolingo.com/*': {
       accept: [
         'a',
