@@ -2,9 +2,9 @@
 	email = jaredbeachdesign@gmail.com
 	name = jmbeach
 [core]
-	editor = 'C:/Program Files (x86)/Vim/vim.exe'
+	editor = 'C:/Program Files (x86)/Vim/vim81/vim.exe'
 	autocrlf = true
-	excludesfile = D:\\Users\\Administrator\\.gitignore
+	excludesfile = $HOME\\.gitignore
 [dif]
 	tool = vimdiff
 [merge]
@@ -27,6 +27,6 @@
 	bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive[user]
 [git]
-	ignore = D:\\Users\\Administrator\\.gitignore
+	ignore = $HOME\\.gitignore
 [mergetool "vimdiff"]
-	cmd = 'C:/Program Files (x86)/Vim/vim.exe' -d $LOCAL $REMOTE $MERGED
+	cmd = 'C:/Program Files (x86)/Vim/vim81/vim.exe' -d $LOCAL $REMOTE $MERGED

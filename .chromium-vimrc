@@ -42,5 +42,5 @@ site '*://tinycards.duolingo.com/*' {
   });
 }}
 
-let configpath = 'D:\\Code\\GitHub\\jmbeach\\dot-files\\.chromium-vimrc'
+let configpath = 'C:\\Users\\jbeach2\\Code\\GitHub\\jmbeach\\dot-files\\.chromium-vimrc'
 set localconfig
